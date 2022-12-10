@@ -139,9 +139,9 @@ public class JDBCPostgresDemo {
 	public static void main(String args[]) throws SQLException {
 		JDBCPostgresDemo postgres = new JDBCPostgresDemo();
 		postgres.setConnection();
-		// postgres.createTable();
-		//postgres.addContraints();
-		//postgres.insertValues();
+		postgres.createTable();
+		postgres.addContraints();
+		postgres.insertValues();
 		postgres.doTransactions();
 		postgres.conn.close();
 
