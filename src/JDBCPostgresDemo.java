@@ -57,8 +57,8 @@ public class JDBCPostgresDemo {
 			String alterTableProd = "alter table Product add constraint pk_product  primary key(prod_id)";
 			String alterTableDepot = "alter table depot add constraint pk_depot primary key(dep_id)";
 			String alterTableStock = "alter table stock add constraint pk_stock primary key(prod_id,dep_id)";
-			String fkProdStock = "alter table stock add constraint fk_stock_product foreign key(prod_id) references product(prod_id) ON DELETE CASCADE";
-			String fkDepotStock = "alter table stock add constraint fk_stock_depot foreign key(dep_id) references depot(dep_id) ON DELETE CASCADE";
+			String fkProdStock = "alter table stock add constraint fk_stock_product foreign key(prod_id) references product(prod_id) ON DELETE CASCADE ON UPDATE CASCADE";
+			String fkDepotStock = "alter table stock add constraint fk_stock_depot foreign key(dep_id) references depot(dep_id) ON DELETE CASCADE ON UPDATE CASCADE";
 			stmt.execute(alterTableProd);
 			stmt.execute(alterTableDepot);
 			stmt.execute(alterTableStock);
